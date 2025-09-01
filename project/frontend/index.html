@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnSmart AI - Quality Education for All</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🤟</div>
+                <h1>LearnSmart AI</h1>
+                <span class="accessibility-badge">Deaf-Friendly Learning</span>
+            </div>
+            <nav class="nav">
+                <div class="nav-items">
+                    <button id="visualModeBtn" class="visual-mode-btn" title="Toggle Visual Learning Mode">
+                        👁️ Visual Mode
+                    </button>
+                    <span class="sdg-badge">SDG 4: Quality Education</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h2>Visual Learning Made Simple</h2>
+                <p>Our AI tutor creates visual explanations, uses simple language, and supports deaf and hard-of-hearing learners with clear, accessible content.</p>
+                <div class="accessibility-features">
+                    <div class="feature-badge">👁️ Visual Learning</div>
+                    <div class="feature-badge">🤟 Sign Language Friendly</div>
+                    <div class="feature-badge">📝 Clear Text</div>
+                    <div class="feature-badge">🎨 Visual Aids</div>
+                </div>
+            </section>
+
+            <section class="question-section">
+                <div class="question-form">
+                    <div class="form-group">
+                        <label for="learningStyle">Learning Style</label>
+                        <select id="learningStyle" class="learning-style-select">
+                            <option value="visual">Visual Learning (Pictures & Diagrams)</option>
+                            <option value="text">Text-Based Learning</option>
+                            <option value="simple">Very Simple Language</option>
+                            <option value="step-by-step">Step-by-Step Instructions</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject (Optional)</label>
+                        <select id="subject" class="subject-select">
+                            <option value="">Select a subject</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="history">History</option>
+                            <option value="literature">Literature</option>
+                            <option value="geography">Geography</option>
+                            <option value="sign-language">Sign Language</option>
+                            <option value="life-skills">Life Skills</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="question">Your Question</label>
+                        <div class="question-help">
+                            💡 <strong>Tip:</strong> Ask about anything! We'll explain it with pictures, simple words, and clear examples.
+                        </div>
+                        <textarea 
+                            id="question" 
+                            placeholder="What would you like to learn? (Example: How do plants grow? What is addition? How do I say hello in sign language?)"
+                            rows="4"
+                            maxlength="500"
+                        ></textarea>
+                        <div class="char-count">
+                            <span id="charCount">0</span>/500
+                        </div>
+                    </div>
+                    
+                    <button id="askButton" class="ask-button" disabled>
+                        <span class="button-text">Ask Question</span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </div>
+
+                <div id="answerSection" class="answer-section hidden">
+                    <div class="answer-header">
+                        <h3>AI Explanation</h3>
+                        <div class="answer-meta">
+                            <span id="answerSubject" class="subject-tag"></span>
+                            <span id="learningStyleTag" class="learning-style-tag"></span>
+                            <span id="answerTime" class="time-stamp"></span>
+                        </div>
+                    </div>
+                    <div id="visualAids" class="visual-aids hidden">
+                        <h4>🎨 Visual Learning Aids</h4>
+                        <div id="visualContent" class="visual-content"></div>
+                    </div>
+                    <div id="answerContent" class="answer-content"></div>
+                    <div id="signLanguageSection" class="sign-language-section hidden">
+                        <h4>🤟 Sign Language Resources</h4>
+                        <div id="signLanguageContent" class="sign-language-content"></div>
+                    </div>
+                    <div class="answer-actions">
+                        <button id="readAloudBtn" class="action-button">🔊 Read Aloud</button>
+                        <button id="simplifyBtn" class="action-button">✨ Make Simpler</button>
+                        <button id="newQuestionBtn" class="secondary-button">Ask Another Question</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-questions">
+                <h3>📖 Your Learning History</h3>
+                <div id="recentQuestionsList" class="questions-list">
+                    <div class="empty-state">
+                        <div class="empty-icon">🌟</div>
+                        <p>No questions asked yet. Start learning by asking your first question!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 LearnSmart AI - Inclusive Education for Deaf & Hard-of-Hearing Learners | Supporting SDG 4</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
