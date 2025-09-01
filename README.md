@@ -62,7 +62,7 @@ Copy code
 ## 🔗 Deployment
 
 Once deployed, you can access the live app here:  
-**Deployment Link:** [Add your deployed app link here]()
+**Deployment Link:** [https://learn-smart-l5eg.vercel.app/]()
 
 
 ---
