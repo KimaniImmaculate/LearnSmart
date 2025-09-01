@@ -1,1 +1,2 @@
-.env.example # Ignore environment example file
+# Ignore environment secrets
+.env
